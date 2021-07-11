@@ -30,4 +30,4 @@ def bfs(v):
 
 print(dfs(v))
 print(bfs(v))
-#출력 값 끝에 None
+#출력 값 끝에 None 질문,,
