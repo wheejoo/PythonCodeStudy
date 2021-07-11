@@ -30,7 +30,7 @@ for _ in range(t):
     cnt = 0
     for i in range(n):
         for j in range(m):
-            if graph[i][j] == 1: #배추0
+            if graph[i][j] == 1:
                 bfs(i,j)
-                cnt += 1 #지렁이 +1
+                cnt += 1 
     print(cnt)
