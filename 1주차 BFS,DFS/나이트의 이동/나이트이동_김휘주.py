@@ -14,7 +14,7 @@ def bfs(x1,y1,x2,y2):
             nx = x + dx[i]
             ny = y + dy[i]
             if 0 <= nx < l and 0<= ny < l:
-                if graph[nx][ny] == 0: #끝좌표가 0이라면
+                if graph[nx][ny] == 0:
                     q.append((nx, ny))
                     graph[nx][ny] = graph[x][y]+1
 
