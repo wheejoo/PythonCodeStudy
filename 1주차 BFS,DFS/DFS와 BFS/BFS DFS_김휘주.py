@@ -28,6 +28,7 @@ def bfs(v):
                 q.append(i)
                 visited[i] = False
 
-print(dfs(v))
-print(bfs(v))
-#출력 값 끝에 None 질문,,
+dfs(v)
+print(n)
+bfs(v)
+
