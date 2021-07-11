@@ -29,6 +29,5 @@ def bfs(v):
                 visited[i] = False
 
 dfs(v)
-print(n)
+print()
 bfs(v)
-

@@ -24,13 +24,13 @@ for _ in range(t):
     #배추
     for _ in range(k):
         a, b = map(int, input().split())
-        graph[b][a] = 1 
-        #graph[a][b] = 1 list index out of range
+        graph[b][a] = 1
+        # graph[a][b] = 1
     #지렁이
     cnt = 0
     for i in range(n):
         for j in range(m):
-            if graph[i][j] == 1:
+            if graph[i][j] == 1: #배추0
                 bfs(i,j)
-                cnt += 1 
+                cnt += 1 #지렁이 +1
     print(cnt)
