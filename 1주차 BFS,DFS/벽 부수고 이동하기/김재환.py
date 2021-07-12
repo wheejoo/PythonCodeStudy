@@ -34,7 +34,6 @@ def BFS():
                             q.append([nx,ny,z])
                         elif M[nx][ny] == 1:
                             q.append([nx,ny,1])
-                            M[nx][ny] = 4
                         elif M[nx][ny] == 3:
                             q.append([nx,ny,z])
                             M[nx][ny]=2
