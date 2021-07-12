@@ -1,18 +1,18 @@
 def solution(n, computers):
     answer = 0
-    visited = [False for i in range(n)]
-    for com in range(n):
-        if visited[com] == False:
+    visited = [False for _ in range(n)]
+    for i in range(n):
+        if visited[i] == False:
             answer += 1
-            DFS(n, computers, com, visited)
+            DFS(n, computers, i, visited)
     return answer
 
-def DFS(n, computers, com, visited):
-    visited[com] = True
-    for con in range(n):
-        if con != com and computers[com][con] == 1:
-            if visited[con] == False:
-                DFS(n, computers, con, visited)
+def DFS(n, computers, i, visited):
+    visited[i] = True
+    for j in range(n):
+        if j != i and computers[i][j] == 1:
+            if visited[j] == False:
+                DFS(n, computers, j, visited)
 
 
 n = 3
