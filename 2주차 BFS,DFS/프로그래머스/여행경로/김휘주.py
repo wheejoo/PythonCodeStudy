@@ -15,4 +15,5 @@ def solution(tickets):
     return path[::-1] #역순 반환
 
 tickets = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]
+# tickets = [["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]
 print(solution(tickets))
