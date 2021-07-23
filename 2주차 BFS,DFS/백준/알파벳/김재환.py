@@ -1,32 +1,27 @@
-from collections import deque
-
-dx = [1, -1, 0, 0]
-dy = [0, 0, 1, -1]
-
-
-def bfs():
-    result = 1
-    queue = set([(0, 0, board[0][0])])
-
-    while queue:
-        x, y, visited = queue.pop()
-
-        for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
-            if nx < 0 or nx >= r or ny < 0 or ny >= c:
-                continue
-            elif board[nx][ny] not in visited:
-                next_visited = visited + board[nx][ny]
-                queue.add((nx, ny, next_visited))
-                result = max(result, len(next_visited))
-        print(queue)
-    return result
-
-
 r, c = map(int, input().split())
-board = []
+M = []
 for i in range(r):
-    board.append(list(input()))
+    tmp = list(input())
+    M.append(tmp)
 
-print(bfs())
+alpha = [0]*26
+alpha[ord(M[0][0])-65] = 1
+s = [[[0, 0], alpha]]
+count = 1
+dx = [0, 0, 1, -1]  # 동서남북
+dy = [1, -1, 0, 0]
+while s:
+    point, path = s.pop()
+    print("point:", point)
+    x, y = point
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        if (0 <= nx < r) and (0 <= ny < c) and (path[ord(M[nx][ny])-65] == 0):
+            newpath = list(path)
+            newpath[ord(M[nx][ny])-65] = 1
+            s.append([[nx, ny], newpath])
+            if count < sum(newpath):
+                count = sum(newpath)
+    print(s)
+print(count)
