@@ -6,16 +6,16 @@ from collections import deque
 
 
 def check(astring, bstring):
-    count = 0
+    count2 = 0
     if len(astring) != len(bstring):
         return False
 
     for i in range(len(astring)):
         for j in range(len(bstring)):
             if i == j and astring[i] == bstring[j]:
-                count += 1
+                count2 += 1
 
-    return count == len(astring) - 1
+    return count2 == len(astring) - 1
 
 
 def dfs(begin, target, words):
