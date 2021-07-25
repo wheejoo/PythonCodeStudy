@@ -6,6 +6,7 @@ import sys
 
 # 10 ** 6 : 메모리 초과, 50000 : recursionError
 sys.setrecursionlimit(60000)
+input = sys.stdin.readline
 
 
 # 재귀 584ms
@@ -21,19 +22,17 @@ def dfs(start):
     return start
 
 
-# 스택 시간초과
+# 스택 344ms
 def dfs_stack(start):
-    stack = deque([[start, visited]])
-
+    stack = deque([start])
+    visited[start] = 1
     while stack:
-        now, nvisit = stack.pop()
-        if nvisit[now] != 0:
-            continue
-        nvisit[now] = 1
+        now = stack.pop()
         for node in path[now]:
-            if nvisit[node] == 0:
+            if visited[node] == 0:
                 root[node] = now
-                stack.append([node, nvisit + [node]])
+                visited[node] = 1
+                stack.append(node)
 
 
 n = int(input())
