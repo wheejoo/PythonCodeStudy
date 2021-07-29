@@ -1,3 +1,5 @@
+# pypy3 
+
 n,m = map(int , input().split())
 M = []
 big = 0

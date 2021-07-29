@@ -1,5 +1,4 @@
 def solution(money):
-    answer = 0
     dp = [0 for i in range(len(money))]
     dp2 = [0 for i in range(len(money))]
     dp[0] = money[0]
