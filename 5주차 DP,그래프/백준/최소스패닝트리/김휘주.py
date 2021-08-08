@@ -1,5 +1,6 @@
 # https://www.acmicpc.net/problem/1197
-# 크루스칼?
+# 크루스칼 - 가장 적은 비용으로 노드 연결 / 사이클 X
+# 이것이 코딩테스트다 책 참고 
 
 v,e = map(int,input().split())
 n = []
