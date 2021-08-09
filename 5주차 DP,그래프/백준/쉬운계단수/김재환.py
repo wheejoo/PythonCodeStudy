@@ -14,7 +14,6 @@ for i in range(1, n):
         dp[i][j] += dp[i-1][j-1] + dp[i-1][j+1]
 print(sum(dp[n-1])%1000000000)
 
-
 '''n=int(input())
 
 graph = [1,2,3,4,5,6,7,8,9]

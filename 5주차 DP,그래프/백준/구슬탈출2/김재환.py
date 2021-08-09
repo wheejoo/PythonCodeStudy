@@ -1,7 +1,6 @@
 # 50퍼에서 처참히 실패
 
 from collections import deque
-from typing import no_type_check
 n,m = map(int, input().split()) #세로가로
 # visited 초기화
 visitedR = [[0 for i in range(m)] for i in range(n)]
@@ -36,7 +35,6 @@ def move(direction, b1, b2, q, order):
         if (0<ny<n-1) and (0<nx<m-1):
             # 탈출조건
             if Map[ny][nx] == "O":
-                print("O!1")
                 y = ny
                 x = nx
                 flag = 1
@@ -55,7 +53,8 @@ def move(direction, b1, b2, q, order):
         if (0<ny2<n-1) and (0<nx2<m-1):
             # 탈출조건
             if Map[ny2][nx2] == "O":
-                print("O!2")
+                y2 = ny2
+                x2 = nx2
                 flag = 2
                 break
             if Map[ny2][nx2] != '#' and [ny2,nx2] != [y,x]:#벽이 아니고 빨강공의 위치가 아니어야함.
