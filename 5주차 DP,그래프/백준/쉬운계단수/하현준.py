@@ -16,5 +16,5 @@ for i in range(2, n + 1):
         dp[i][k] = dp[i - 1][k - 1] + dp[i - 1][k + 1]
 print(sum(dp[n]) % num)
 
-# for i in range(len(dp)):
-#     print(f"dp[{i}] ", " ".join([str(x) for x in dp[i]]), sum(dp[i]))
+for i in range(1, len(dp)):
+    print(f"dp[{i}] ", " ".join([str(x) for x in dp[i]]), sum(dp[i]))
