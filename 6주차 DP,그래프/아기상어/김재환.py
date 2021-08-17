@@ -12,7 +12,6 @@ q 에는 상어의 위치, 레벨, 먹을 물고기수, life
 mq 에는 물고기의 y좌표,x좌표
 visited 필요함. 단 먹이 먹으면 갱신
 map은 전역으로 변경해줌
-
 '''
 n = int(input())
 Map =[]
@@ -66,9 +65,6 @@ def BFS(sharkinfo):
             else: # 렙업시기 아님
                 ex -= 1
             return BFS([[my,mx], size, ex, life + time])
-    
     return life
 
 print(BFS([shark,2,2,0]))
-
-

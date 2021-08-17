@@ -7,7 +7,6 @@ import sys
 sys.setrecursionlimit(60000)
 input = sys.stdin.readline
 
-
 def dfs(x, y):
     global graph, count
 

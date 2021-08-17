@@ -3,7 +3,6 @@
 """
 from collections import deque
 
-
 def bfs():
     global time, shark
     sx, sy, ssize = shark
@@ -36,7 +35,6 @@ def bfs():
     graph[ex][ey] = 0
     time += edist
     return True
-
 
 n = int(input())
 time = 0

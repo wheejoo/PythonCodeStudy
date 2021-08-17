@@ -5,9 +5,7 @@
 
 1. 이동방향 정하기
 2. 이동시키기 
-3. 구슬 멈추면 visited 표시하기 
-(visited 2개 하나는 멈춰도 계속 움직일 가능성 있음)
-4. 만약 이동중에 구멍에 볼 들어가면 함수 반환
+3. 만약 이동중에 구멍에 볼 들어가면 함수 반환
 
 세부적으로 어떤 공을 먼저 움직이게 할지
 상하좌우 방향에 따라 먼저 움직여야 하는 공이 다르다.
@@ -21,8 +19,6 @@
 
 N,M = map(int, input().split()) # 세로 가로
 Map = []
-visited_R = [[0 for i in range(M)] for i in range(N)]
-visited_B = [[0 for i in range(M)] for i in range(N)]
 R, B = 0,0
 for i in range(N):
     tmp = list(input())
@@ -30,10 +26,8 @@ for i in range(N):
     for j in range(M):
         if tmp[j] == "R":
             R = [i,j]
-            visited_R[i][j] = 1
         if tmp[j] == "B":
             B = [i,j]
-            visited_B[i][j] = 1
 
 dy = [-1,1,0,0] # 상하좌우
 dx = [0,0,-1,1]
@@ -110,23 +104,16 @@ def go(direction,R,B):
     # 정산시작~ #outdoor가 0이면
     print(y,x,y2,x2)
     print(outdoor1, outdoor2)
-    print(visited_R[y][x], visited_B[y2][x2])
     if reverse == 0: # R , B
-        if outdoor1==False and outdoor2==False: # 다른방향도 해야함. visited에 체크하고 q에 삽입
-            if visited_R[y][x] == 0 or visited_B[y2][x2]==0:
-                q.append([[y,x],[y2,x2]])
-                visited_R[y][x] = 1
-                visited_B[y2][x2] = 1
-                return 0
+        if outdoor1==False and outdoor2==False: # 다른방향도 해야함.
+            q.append([[y,x],[y2,x2]])
+            return 0
         elif outdoor1==True and outdoor2==False:# 성공!
             return 1
     else: # B, R
         if outdoor1==False and outdoor2==False: # 다른방향도 해야함.
-            if visited_B[y][x] == 0 or visited_R[y2][x2]==0:
-                q.append([[y2,x2],[y,x]])
-                visited_R[y2][x2] = 1
-                visited_B[y][x] = 1
-                return 0
+            q.append([[y2,x2],[y,x]])
+            return 0
         elif outdoor1==False and outdoor2==True:# 성공!
             return 1
 
