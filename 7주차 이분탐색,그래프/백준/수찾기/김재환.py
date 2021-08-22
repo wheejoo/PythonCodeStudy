@@ -16,7 +16,5 @@ def find(val):
         else:
             R = M-1
     return 0
-
-
 for i in n2l:
     print(find(i))
