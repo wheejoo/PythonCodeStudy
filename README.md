@@ -63,3 +63,12 @@
 - +a : 저번주에 못한 알고리즘 정리하기~(자유)
 
 ---
+
+# ✅ 7주차
+
+- 이번주 이분탐색, 그래프
+- 백준 이분탐색 +5 (https://www.acmicpc.net/problemset?sort=ac_desc&algo=12) (10816~12015)   
+- 백준 그래프 +5 (https://www.acmicpc.net/problemset?sort=ac_desc&algo=7) (16234~2573)   
+- +a : 저번주에 못한 알고리즘 정리하기~(자유)   
+
+---
