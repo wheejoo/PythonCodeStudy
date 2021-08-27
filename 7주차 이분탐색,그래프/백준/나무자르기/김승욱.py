@@ -14,8 +14,10 @@ while l <= r:
     for i in value:
         if i > mid:
             answer += i - mid
-
-    if answer >= m:  
+    if answer == m:
+        check = mid
+        break
+    if answer > m:
         l = mid + 1
         check = mid
     else:
