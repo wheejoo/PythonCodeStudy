@@ -10,6 +10,13 @@
 
 ### 주차별 문제
 
+# ✅ 9주차
+
+- 이번주 카카오21 blind 문제
+- 프로그래머스 +7 (https://programmers.co.kr/learn/challenges?tab=all_challenges)
+
+---
+
 # ✅ 8주차
 
 - 이번주 이분탐색, 그래프
