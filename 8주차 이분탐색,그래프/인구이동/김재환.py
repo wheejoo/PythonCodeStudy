@@ -16,6 +16,7 @@ dx = [0,0,-1,1]
 total = 0
 contry = 0
 flag=0
+
 def BFS(q, visited):
     global contry
     global total
