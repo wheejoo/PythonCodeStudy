@@ -9,10 +9,11 @@
 - Python
 
 ### 주차별 문제
+
 # ✅ 10주차
 
-- 이번주 카카오21 blind 문제
-- 프로그래머스 +7 (https://programmers.co.kr/learn/challenges?tab=all_challenges)
+- 프로그래머스(카카오 2020 블라인드, 카카오 2021 채용연계 인턴쉽) :
+  https://programmers.co.kr/learn/challenges
 
 ---
 
